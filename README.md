@@ -21,7 +21,7 @@ A simple and fast CLI tool to generate a predefined, opinionated folder structur
 ## Installation
 
 ```bash
-$ npm i @nhankyjangchan/project-structure-generator
+$ npm i -g @nhankyjangchan/project-structure-generator
 ```
 
 ## Usage

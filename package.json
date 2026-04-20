@@ -1,6 +1,6 @@
 {
     "name": "@nhankyjangchan/project-structure-generator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": false,
     "description": "CLI tool to generate standardized Node.js or Bun backend project structure",
     "keywords": [
@@ -24,7 +24,7 @@
     },
     "exports": {
         ".": {
-            "import": "./lib/psg.js"
+            "import": "./lib/index.js"
         },
         "./package.json": "./package.json"
     },
@@ -50,7 +50,7 @@
         "email": "dev.schuchkin.timur@gmail.com"
     },
     "scripts": {
-        "b:build": "bun build ./lib/psg.ts --outfile ./lib/psg.js --target node --format esm --minify --external '*'",
+        "b:build": "bun build ./lib/index.ts --outfile ./lib/index.js --target node --format esm --minify --external '*'",
         "p:write": "bunx prettier . --write"
     },
     "engines": {

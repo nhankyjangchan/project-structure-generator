@@ -5,7 +5,7 @@ node_modules/
 .npmrc
 
 # Package;
-lib/psg.js
+lib/index.js
 
 # Build directories;
 dist/
