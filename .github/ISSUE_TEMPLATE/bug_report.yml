@@ -1,0 +1,151 @@
+name: 🐛 Bug report
+description: Submit a detailed bug report to help investigate and resolve the issue with this CLI tool.
+title: '[BUG] '
+labels: ['bug']
+assignees: ['nhankyjangchan']
+body:
+    - type: markdown
+      id: bug_report-header-before-info
+      attributes:
+          value: ⚠️ **Before filling this form**, please ensure you've read the [documentation](https://github.com/nhankyjangchan/project-structure-generator) and searched for [existing issues](https://github.com/nhankyjangchan/project-structure-generator/issues).
+
+    - type: markdown
+      id: bug_report-header-security-info
+      attributes:
+          value: 🔒 If you believe you've found a **security vulnerability**, **DO NOT** report it through public GitHub issues, discussions, pull requests, or any other public channel. Doing so exposes the vulnerability to potential attackers before a fix can be prepared and released, endangering all users who depend on this package. Instead, please review the project's **[Security Policy](https://github.com/nhankyjangchan/project-structure-generator/security/policy)** for details.
+
+    - type: textarea
+      id: bug_description
+      attributes:
+          label: Describe the bug
+          description: A clear and concise description of what the bug is.
+          placeholder: Error when generating project with --ts flag
+      validations:
+          required: true
+
+    - type: textarea
+      id: bug_reproduction-steps
+      attributes:
+          label: Steps to reproduce
+          description: How to reproduce the behavior.
+          placeholder: |
+              1. Create empty directory: `mkdir test-project && cd test-project`
+              2. Run command: `psg --ts --prettier`
+              3. Confirm with `y`
+              4. See error: `Cannot find module...`
+      validations:
+          required: true
+
+    - type: textarea
+      id: tool_expected-behavior
+      attributes:
+          label: Expected behavior
+          description: A clear and concise description of what you expected to happen.
+          placeholder: Project structure should be generated with tsconfig.json and Prettier configs
+      validations:
+          required: true
+
+    - type: textarea
+      id: bug_actual-behavior
+      attributes:
+          label: Actual behavior
+          description: What actually happened? Include error messages and stack traces.
+          placeholder: |
+              ERROR: ENOENT: no such file or directory, copyfile...
+
+              Stack trace:
+              at async copyFile (node:fs/promises:...)
+      validations:
+          required: true
+
+    - type: dropdown
+      id: environment_package-version
+      attributes:
+          label: Package version
+          description: Please specify the package version where the bug was found.
+          multiple: false
+          options:
+              - v1.0.x
+          default: 0
+      validations:
+          required: true
+
+    - type: dropdown
+      id: environment_installation-method
+      attributes:
+          label: Installation method
+          description: How did you install the package?
+          multiple: false
+          options:
+              - npm install -g
+              - npx
+              - bun install -g
+              - yarn global add
+              - pnpm add -g
+              - Local development (npm link)
+          default: 0
+      validations:
+          required: true
+
+    - type: input
+      id: environment_node-version
+      attributes:
+          label: Node.js version
+          description: Run `node --version` and paste the output.
+          placeholder: v20.10.0
+      validations:
+          required: true
+
+    - type: input
+      id: environment_npm-version
+      attributes:
+          label: npm version (if applicable)
+          description: Run `npm --version` and paste the output.
+          placeholder: 10.2.0
+      validations:
+          required: false
+
+    - type: input
+      id: environment_os
+      attributes:
+          label: OS type and version
+          description: Please indicate the type and version of the OS on which you encountered the bug.
+          placeholder: GNU/Linux Debian 13
+      validations:
+          required: true
+
+    - type: input
+      id: bug_flags-used
+      attributes:
+          label: Command flags used
+          description: Which flags did you use with the `psg` command?
+          placeholder: '--ts --prettier --force'
+      validations:
+          required: false
+
+    - type: checkboxes
+      id: bug_directory-state
+      attributes:
+          label: Target directory state
+          description: What was the state of the directory where you ran the command?
+          options:
+              - label: Empty directory
+              - label: Non-empty directory (used --force)
+              - label: Non-empty directory (without --force)
+              - label: Directory with existing .git folder
+      validations:
+          required: false
+
+    - type: textarea
+      id: bug_context
+      attributes:
+          label: Additional context
+          description: Add any other context about the problem here.
+          placeholder: Paste error logs or cURL commands here...
+      validations:
+          required: false
+
+    - type: markdown
+      id: bug_report-footer
+      attributes:
+          value: 💙 Thanks for helping improve this tool!

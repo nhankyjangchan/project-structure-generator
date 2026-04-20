@@ -1,0 +1,64 @@
+{
+    "name": "@nhankyjangchan/project-structure-generator",
+    "version": "1.0.0",
+    "private": false,
+    "description": "CLI tool to generate standardized Node.js or Bun backend project structure",
+    "keywords": [
+        "cli",
+        "project-generator",
+        "scaffolding",
+        "nodejs",
+        "typescript",
+        "prettier",
+        "project-structure",
+        "boilerplate",
+        "generator",
+        "init",
+        "backend"
+    ],
+    "homepage": "https://github.com/nhankyjangchan/project-structure-generator",
+    "license": "MIT",
+    "type": "module",
+    "bin": {
+        "psg": "./lib/psg.js"
+    },
+    "exports": {
+        ".": {
+            "import": "./lib/psg.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "lib",
+        "!lib/psg.ts",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "package.json"
+    ],
+    "author": {
+        "name": "Timur Schuchkin \"Nhankyjangchan\"",
+        "email": "dev.schuchkin.timur@gmail.com",
+        "url": "https://github.com/nhankyjangchan"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nhankyjangchan/project-structure-generator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nhankyjangchan/project-structure-generator/issues",
+        "email": "dev.schuchkin.timur@gmail.com"
+    },
+    "scripts": {
+        "b:build": "bun build ./lib/psg.ts --outfile ./lib/psg.js --target node --format esm --minify --external '*'",
+        "p:write": "bunx prettier . --write"
+    },
+    "engines": {
+        "node": ">=20",
+        "npm": ">=8"
+    },
+    "devDependencies": {
+        "@types/node": "^25.6.0",
+        "prettier": "^3.8.3"
+    }
+}

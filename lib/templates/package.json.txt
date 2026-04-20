@@ -1,0 +1,40 @@
+{
+    "name": "project-name",
+    "version": "1.0.0",
+    "private": true,
+    "description": "***",
+    "keywords": [],
+    "homepage": "https://github.com/***/***",
+    "license": "MIT",
+    "type": "module",
+    "imports": {
+        "#src/*": "./src/*"
+    },
+    "author": {
+        "name": "***",
+        "email": "***@mail.com",
+        "url": "https://github.com/***"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/***/***.git"
+    },
+    "bugs": {
+        "url": "https://github.com/***/***/issues",
+        "email": "***@mail.com"
+    },
+    "scripts": {
+        "b:dev": "bun ./src/app.js",
+        "n:dev": "node ./src/app.js"
+    },
+    "engines": {
+        "bun": ">=1.3",
+        "node": ">=20",
+        "npm": ">=8"
+    },
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ]
+}
