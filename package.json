@@ -1,6 +1,6 @@
 {
     "name": "@nhankyjangchan/project-structure-generator",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": false,
     "description": "CLI tool to generate standardized Node.js or Bun backend project structure",
     "keywords": [
@@ -20,7 +20,7 @@
     "license": "MIT",
     "type": "module",
     "bin": {
-        "psg": "./lib/psg.js"
+        "psg": "./lib/index.js"
     },
     "exports": {
         ".": {
@@ -30,7 +30,7 @@
     },
     "files": [
         "lib",
-        "!lib/psg.ts",
+        "!lib/index.ts",
         "CHANGELOG.md",
         "LICENSE",
         "README.md",
