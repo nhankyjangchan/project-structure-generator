@@ -1,7 +1,7 @@
 {
     "experimentalTernaries": true,
     "experimentalOperatorPosition": "start",
-    "printWidth": 80,
+    "printWidth": 96,
     "tabWidth": 4,
     "useTabs": false,
     "semi": true,

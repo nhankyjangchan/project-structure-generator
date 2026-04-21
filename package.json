@@ -1,20 +1,24 @@
 {
     "name": "@nhankyjangchan/project-structure-generator",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "private": false,
-    "description": "CLI tool to generate standardized Node.js or Bun backend project structure",
+    "description": "Minimal and flexible CLI tool to scaffold a standardized Node.js/Bun backend folder structure with optional TypeScript and Prettier support",
     "keywords": [
-        "cli",
+        "scaffold",
         "project-generator",
-        "scaffolding",
+        "project-template",
+        "skeleton",
+        "boilerplate",
+        "backend-structure",
         "nodejs",
+        "bun",
         "typescript",
         "prettier",
-        "project-structure",
-        "boilerplate",
-        "generator",
+        "cli",
         "init",
-        "backend"
+        "generator",
+        "structure",
+        "setup"
     ],
     "homepage": "https://github.com/nhankyjangchan/project-structure-generator",
     "license": "MIT",
@@ -54,7 +58,7 @@
         "p:write": "bunx prettier . --write"
     },
     "engines": {
-        "node": ">=20",
+        "node": ">=20.11.0",
         "npm": ">=8"
     },
     "devDependencies": {
