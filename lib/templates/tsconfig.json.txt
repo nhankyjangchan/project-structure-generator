@@ -34,7 +34,7 @@
         "rewriteRelativeImportExtensions": true,
         "rootDir": "src",
         "typeRoots": ["./node_modules/@types"],
-        "types": [],
+        "types": ["node", "bun"],
         "declaration": false,
         "declarationDir": null,
         "declarationMap": false,

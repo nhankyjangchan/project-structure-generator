@@ -8,50 +8,54 @@
 [![last update](https://img.shields.io/npm/last-update/%40nhankyjangchan%2Fproject-structure-generator?style=for-the-badge&color=lightgreen)](https://www.npmjs.com/package/@nhankyjangchan/project-structure-generator)
 [![license](https://img.shields.io/npm/l/%40nhankyjangchan%2Fproject-structure-generator?style=for-the-badge&color=orange)](https://github.com/nhankyjangchan/project-structure-generator/blob/main/LICENSE)
 
-A simple and fast CLI tool to generate a predefined, opinionated folder structure for new JS or TS backend projects. It saves time by creating commonly used directories and copying essential configuration boilerplates in seconds.
+Minimal and flexible CLI tool to scaffold a standardized **Node.js** or **Bun** backend folder structure. It generates essential directories and copies configuration boilerplates so you can focus on writing code instead of setting up the skeleton.
 
-**Features:**
+## ✨ Features
 
-- 🚀 **Zero Config:** Just run `psg` and answer `y`.
+- 🚀 **Zero Config by Default** – Run `psg` and you're ready to go.
 - 📁 **Predefined Structure:** Automatically creates `src/` with subfolders like `config`, `controllers`, `models`, `middlewares`, etc.
-- 📄 **Boilerplate Files:** Copies template files for `.gitignore`, `.prettierrc.json` and other from built-in templates.
-- 🔒 **Safety Check:** Prevents accidental overwriting by checking if the target directory is empty (can be bypassed with `--force`).
-- 💬 **Interactive Confirmation:** Asks for permission before modifying the file system.
+- 📄 **Boilerplate Files:** Copies template files from the built-in library.
+- 🔒 **Safety First** – Refuses to run in a non-empty directory unless `--force` is provided.
+- 💬 **Interactive Confirmation** – Asks for explicit user consent before making any changes.
 
-## Installation
+## 📦 Installation
 
 ```bash
 $ npm i -g @nhankyjangchan/project-structure-generator
 ```
 
-## Usage
+## 🛠️ Usage
 
-Navigate to an **empty** folder (or use `--force`) and run:
+Navigate to your project folder and run the command:
 
 ```bash
-$ psg
+psg [flags]
 ```
 
-## Options
+The CLI will check if the directory is empty, display a confirmation prompt, and then generate the structure.
 
-| Flag         | Alias | Description                                                                                               |
-| :----------- | :---- | :-------------------------------------------------------------------------------------------------------- |
-| `--ts`       | -     | Copies `tsconfig.json` template in addition to default JS files.                                          |
-| `--prettier` | -     | Copies `prettier` configuration files.                                                                    |
-| `--force`    | -     | Ignores the "empty directory" check and forces the creation of folders/files (overwrites existing files). |
-| `--h`        | -     | Displays help format.                                                                                     |
+## ⚙️ Options
 
-### Examples
+| Flag         | Description                                                                                               |
+| :----------- | :-------------------------------------------------------------------------------------------------------- |
+| `--ts`       | Copies `tsconfig.json` **instead of** `jsconfig.json` (mutually exclusive).                               |
+| `--prettier` | Copies `.prettierignore` and `.prettierrc.json` configuration files.                                      |
+| `--force`    | Ignores the "empty directory" check and forces the creation of folders/files (overwrites existing files). |
+| `--h`        | Displays help format.                                                                                     |
 
-**1. Basic JavaScript Project**
+## 📋 Examples
+
+### Basic JavaScript Project (Default)
 
 ```bash
-mkdir my-new-api
-cd my-new-api
+mkdir my-cool-api
+cd my-cool-api
 psg
 ```
 
-**2. TypeScript Project with Prettier**
+**Result:** Creates `jsconfig.json` and all default directories.
+
+### TypeScript Project with Prettier
 
 ```bash
 mkdir my-ts-api
@@ -59,13 +63,17 @@ cd my-ts-api
 psg --ts --prettier
 ```
 
-**3. Force Generation in a Non-Empty Directory**
+**Result:** Creates `tsconfig.json` (skips `jsconfig.json`), adds Prettier configs, and creates the standard folder structure.
+
+### Override Non-Empty Directory
 
 ```bash
 psg --force
 ```
 
-## Generated Structure
+**Result:** Copies all applicable files and creates directories, potentially overwriting existing files with the same names.
+
+## 📂 Generated Structure
 
 After running the command, your project root will look like this:
 

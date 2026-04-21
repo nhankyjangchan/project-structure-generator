@@ -3,11 +3,22 @@
 All notable changes to this project will be documented in this file.
 The project adheres to [Semantic Versioning](https://semver.org).
 
+## **1.1.0** / 2026-04-21
+
+### Updated
+
+- **Templates**: Enhanced all boilerplate templates (`.env.development`, `.gitignore`, `.prettierignore`, `.prettierrc.json`, `jsconfig.json`, `tsconfig.json`, `package.json`) with better structure, broader coverage, and modern defaults.
+
+### Changed
+
+- **Manifest**: Updated `description` and expanded `keywords` for better npm discoverability.
+- **Documentation**: Rewritten `README.md` with clearer structure and accurate flag behavior descriptions.
+
 ## **1.0.2** / 2026-04-20
 
 ### Fix
 
-- **Bin file in manifest**: Fixed a bug in the `bin` field of the package manifest that prevented the binary from being created because the field pointed to a non-existent file.
+- **Manifest**: Fixed `bin` field pointing to non-existent file.
 
 ## **1.0.1** / 2026-04-20
 
