@@ -6,9 +6,11 @@ Maintaining the security of **[@nhankyjangchan/project-structure-generator](http
 
 The latest minor version receives active maintenance. The previous minor version receives security fixes only. Older versions are no longer supported.
 
-| Version | Supported          | Notes              |
-| ------- | ------------------ | ------------------ |
-| 1.0.x   | :white_check_mark: | Active maintenance |
+| Version | Supported          | Notes               |
+| ------- | ------------------ | ------------------- |
+| 1.2.x   | :white_check_mark: | Active maintenance  |
+| 1.1.x   | :white_check_mark: | Security fixes only |
+| 1.0.x   | :x:                | No longer supported |
 
 ## 🔒 Reporting a Vulnerability
 

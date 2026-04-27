@@ -65,6 +65,8 @@ body:
           description: Please specify the package version where the bug was found.
           multiple: false
           options:
+              - v1.2.x
+              - v1.1.x
               - v1.0.x
           default: 0
       validations:

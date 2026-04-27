@@ -1,8 +1,8 @@
 {
     "name": "@nhankyjangchan/project-structure-generator",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "private": false,
-    "description": "Minimal and flexible CLI tool to scaffold a standardized Node.js/Bun backend folder structure with optional TypeScript and Prettier support",
+    "description": "Minimal and flexible CLI tool to scaffold a standardized Node.js/Bun backend folder structure with optional TypeScript, Prettier, and custom preset support",
     "keywords": [
         "scaffold",
         "project-generator",
@@ -24,7 +24,7 @@
     "license": "MIT",
     "type": "module",
     "bin": {
-        "psg": "./lib/index.js"
+        "psg": "./bin/index.js"
     },
     "exports": {
         ".": {
@@ -32,9 +32,12 @@
         },
         "./package.json": "./package.json"
     },
+    "imports": {
+        "#lib/*": "./lib/*"
+    },
     "files": [
         "lib",
-        "!lib/index.ts",
+        "!lib/*.ts",
         "CHANGELOG.md",
         "LICENSE",
         "README.md",
@@ -54,7 +57,7 @@
         "email": "dev.schuchkin.timur@gmail.com"
     },
     "scripts": {
-        "b:build": "bun build ./lib/index.ts --outfile ./lib/index.js --target node --format esm --minify --external '*'",
+        "b:build": "bun build ./lib/index.ts --outfile ./bin/index.js --target node --format esm --minify",
         "p:write": "bunx prettier . --write"
     },
     "engines": {

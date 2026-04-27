@@ -1,0 +1,1 @@
+src/config,src/controllers,src/handlers,src/middlewares,src/models,src/plugins,src/routing,src/utils
