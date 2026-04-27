@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 The project adheres to [Semantic Versioning](https://semver.org).
 
+## **1.2.1** / 2026-04-27
+
+### Fixed
+
+- **Config Directory Path Resolution**: Fixed the `#configDir` path in the `CLI` class that incorrectly resolved to `<package>/lib/cli/config` instead of `<package>/lib/config`. The path now correctly resolves relative to `import.meta.dirname` going one level up (`'..'`) then into `lib/config`, ensuring that `base/` and `custom/` preset directories are properly located regardless of the entry point's position in the file tree. This fix restores correct operation of both default scaffolding and custom preset management when the CLI is invoked via the `bin` entry point.
+
 ## **1.2.0** / 2026-04-27
 
 ### Info
