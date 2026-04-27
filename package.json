@@ -1,6 +1,6 @@
 {
     "name": "@nhankyjangchan/project-structure-generator",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "private": false,
     "description": "Minimal and flexible CLI tool to scaffold a standardized Node.js/Bun backend folder structure with optional TypeScript, Prettier, and custom preset support",
     "keywords": [

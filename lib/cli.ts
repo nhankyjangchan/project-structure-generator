@@ -17,7 +17,7 @@ class CLI {
     readonly #currentDir: string = process.cwd();
     readonly #rawFlags: string[] = process.argv.slice(2);
     readonly #flags: Set<string> = new Set(this.rawFlags);
-    readonly #configDir: string = resolve(import.meta.dirname, 'config');
+    readonly #configDir: string = resolve(import.meta.dirname, '..', 'lib', 'config');
     readonly #message: string = 'Invalid format. Run `psg --h`\n';
 
     readonly #presetDir: string;
