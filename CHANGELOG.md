@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 The project adheres to [Semantic Versioning](https://semver.org).
 
+## **1.2.2** / 2026-04-30
+
+### Fixed
+
+- **Template-Only Mode Directory Creation**: Fixed the execution order in the scaffold path where `--use-custom --template <name>` would create the full custom directory structure before loading the single template. The `--template` flag check and `break main` are now placed before the `mkdir` loop, ensuring that only the specified template file is copied without creating any directories. The directory creation loop has been moved below the template filtering block so that standard scaffolding (without `--template`) still creates all directories after copying templates.
+
 ## **1.2.1** / 2026-04-27
 
 ### Fixed
