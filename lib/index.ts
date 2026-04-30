@@ -48,9 +48,6 @@ async function main(): Promise<void> {
 
             const preset: Preset = await cli.generatePreset();
 
-            for (const dir of preset.dirs)
-                await mkdir(dir, { recursive: true });
-
             if (cli.hasFlag('--use-custom'))
                 if (cli.hasFlag('--template')) {
                     const nameIndex: number = cli.nextArgv('--template');
@@ -67,6 +64,9 @@ async function main(): Promise<void> {
                     continue;
                 await copyFile(file.src, file.dest, cli.isForce() ? 0 : c.COPYFILE_EXCL);
             }
+
+            for (const dir of preset.dirs)
+                await mkdir(dir, { recursive: true });
         }
 
         console.log('Done!\n');
